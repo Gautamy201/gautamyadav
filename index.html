@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <div class="logo">
+        <p><span>C</span>ode-<span>M</span>aster</p>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#index" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#eduction">Eduction</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icon">
+        <button onclick="handleMenuBtn()" class="menu-icon-btn">
+          <i class="ri-menu-3-line"></i>
+        </button>
+        <div class="menu-list" id="menu-list">
+          <ul>
+            <li><a href="#home" class="active-menu">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#eduction">Eduction</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- strat hero section -->
+    <section>
+      <div class="first-container">
+        <div class="left-container">
+          <h2>Hello, It's Me</h2>
+          <h1 id="name"></h1>
+          <p>
+            I'm Gautam Yadav, Frontend Developer with a passion for creating
+            dynamic and responsive web applications...
+            <a href="#about">Read More</a>
+          </p>
+          <div class="button-icons_continer">
+            <button>Download Resume</button>
+            <div class="icon-container">
+              <div class="icon"><i class="ri-whatsapp-line"></i></div>
+              <div class="icon"><i class="ri-instagram-line"></i></div>
+              <div class="icon"><i class="ri-linkedin-line"></i></div>
+              <div class="icon"><i class="ri-twitter-line"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-container">
+          <div class="picture">
+            <img src="images/gautam.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about -->
+    <section class="about">
+      <div class="section-title">About <span>Me</span></div>
+      <div class="aboutImg_container">
+        <div class="about-img">
+          <img width="100%" src="images/second-profile-img.jpg" alt="" />
+          <span class="circle-spin"></span>
+        </div>
+      </div>
+      <h1 class="about-title">
+        <span>F</span>rontend <span>D</span>eveloper <span>!</span>
+      </h1>
+      <p class="about-detail">
+        I'm Gautam Yadav, a 26-year-old frontend developer with a passion for
+        creating dynamic and responsive web applications. With a strong
+        background in
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>,
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>,
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          >JavaScript</a
+        >, and
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"
+          >ReactJs</a
+        >
+        I specialize in building user-friendly interfaces that enhance the user
+        experience.
+
+        <br /><br />
+
+        I am dedicated to continuous learning and staying updated with the
+        latest technologies and trends in frontend development. My goal is to
+        deliver high-quality and efficient solutions that meet the needs of
+        users and clients alike.
+
+        <br /><br />
+
+        Thank you for visiting, and I look forward to sharing my journey and
+        projects with you!
+      </p>
+    </section>
+    <section class="education">
+      <div class="section-title">My <span>Education</span></div>
+      <div class="eductaion-conatiner">
+        <div class="left">
+          <h2 class="heading">Education</h2>
+          <div class="contentBox">
+            <div class="content">
+              <div class="year">
+                <i class="ri-calendar-todo-fill"> <span>2012 - 2013</span></i>
+              </div>
+              <div class="fullDetail">
+                <p>High-School - Maharashtra Board</p>
+              </div>
+              <div class="percent">
+                <p>48%</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="year">
+                <i class="ri-calendar-todo-fill"><span>2013-2015</span></i>
+              </div>
+              <div class="fullDetail">
+                <p>Intermidiat - UP Board</p>
+              </div>
+              <div class="percent">
+                <p>58%</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="year">
+                <i class="ri-calendar-todo-fill"><span>2016-2019</span></i>
+              </div>
+              <div class="fullDetail">
+                <p>BCA - Intragal University Lucknow</p>
+              </div>
+              <div class="percent">
+                <p>78%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <h2 class="heading">Experience</h2>
+          <div class="contentBox">
+            <div class="content exp-Cont">
+              <h3 class="exp">No Experience</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skills -->
+    <section class="skills">
+      <div class="section-title">My <span>Skills</span></div>
+      <div class="skillContainer">
+        <div class="skill-container">
+          <div class="img">
+            <img width="100%" src="images/icons8-html5-480.png" alt="" />
+          </div>
+          <div class="sikill-name">
+            <p>HTML - 97%</p>
+          </div>
+          <div class="progressBar">
+            <div class="progress" style="width: 97%"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="img">
+            <img width="100%" src="images/icons8-css-400.png" alt="" />
+          </div>
+          <div class="sikill-name">
+            <p>CSS - 95%</p>
+          </div>
+          <div class="progressBar">
+            <div class="progress" style="width: 97%"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="img">
+            <img width="100%" src="images/icons8-js-480.png" alt="" />
+          </div>
+          <div class="sikill-name">
+            <p>JS - 93%</p>
+          </div>
+          <div class="progressBar">
+            <div class="progress" style="width: 97%"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="img">
+            <img width="100%" src="images/icons8-react-js-400.png" alt="" />
+          </div>
+          <div class="sikill-name">
+            <p>ReactJS - 90%</p>
+          </div>
+          <div class="progressBar">
+            <div class="progress" style="width: 97%"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="img">
+            <img width="100%" src="images/icons8-chakra-ui-480.png" alt="" />
+          </div>
+          <div class="sikill-name">
+            <p>Chakra Ui - 90%</p>
+          </div>
+          <div class="progressBar">
+            <div class="progress" style="width: 97%"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="img">
+            <img width="100%" src="images/icons8-bootstrap-480.png" alt="" />
+          </div>
+          <div class="sikill-name">
+            <p>Bootstrap - 90%</p>
+          </div>
+          <div class="progressBar">
+            <div class="progress" style="width: 97%"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="img">
+            <img width="100%" src="images/icons8-tailwindcss-480.png" alt="" />
+          </div>
+          <div class="sikill-name">
+            <p>Tilwindcss - 90%</p>
+          </div>
+          <div class="progressBar">
+            <div class="progress" style="width: 97%"></div>
+          </div>
+        </div>
+        <div class="skill-container">
+          <div class="img">
+            <img width="100%" src="images/icons8-figma-480.png" alt="" />
+          </div>
+          <div class="sikill-name">
+            <p>Figma - 80%</p>
+          </div>
+          <div class="progressBar">
+            <div class="progress" style="width: 97%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact us -->
+    <section class="contact">
+      <div class="section-title">Contact <span>Me!</span></div>
+      <div class="formContainer">
+        <form action="">
+          <input class="fullName" type="text" placeholder="Full Name" />
+          <input class="email" type="email" placeholder="Email Address" />
+          <input class="mobile" type="number" placeholder="Mobile Number" />
+          <input class="subject" type="text" placeholder="Subject" />
+          <textarea
+            class="message"
+            name="comment"
+            form="usrform"
+            placeholder="Enter Your Message"
+          ></textarea>
+          <button class="sub-btn">Submite</button>
+        </form>
+      </div>
+      <footer class="footer_high">
+        <p>
+          &copy; 2024 Code Master. All rights reserved. | Designed by
+          <a href="#">Gautam Kamlesh Yadav</a>
+        </p>
+      </footer>
+      <footer class="footer_lowend">
+        <p style="font-size: 1.6rem">&copy; 2024 Code Master</p>
+        <p>All rights reserved. | Designed by</p>
+        <p>
+          <a href="#" style="font-size: 1.6rem">Gautam Kamlesh Yadav</a>
+        </p>
+      </footer>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

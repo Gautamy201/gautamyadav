@@ -1,0 +1,597 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: monospace;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  height: 10vh;
+  padding: 0 12vw;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: #1a1a1a;
+}
+.logo p {
+  font-size: 1.8rem;
+  font-family: cursive;
+  font-weight: 600;
+}
+.logo p span {
+  font-size: 32px;
+  font-weight: 800;
+  color: rgb(136, 195, 47);
+}
+nav {
+  overflow: hidden;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 0.3rem 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+nav ul li a:hover {
+  background-color: rgb(124, 201, 8);
+  color: black;
+  font-weight: 550;
+  border-radius: 50px;
+}
+.active {
+  background-color: rgb(124, 201, 8);
+  color: black;
+  font-weight: 550;
+  border-radius: 50px;
+}
+.menu-icon {
+  display: none;
+}
+.menu-icon-btn {
+  font-size: 3rem;
+  font-weight: 600;
+  color: greenyellow;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  align-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid yellowgreen;
+  background-color: #1a1a1a;
+}
+.menu-list {
+  position: absolute;
+  top: 10vh;
+  left: 0%;
+  background: #1a1a1a;
+  width: 100%;
+  display: none;
+  border-bottom: 2px solid yellowgreen;
+}
+
+.menu-list ul {
+  list-style: none;
+}
+
+.menu-list ul li a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 2rem;
+  color: white;
+}
+.active-menu {
+  color: greenyellow;
+}
+
+/* section */
+section {
+  padding: 10vh 12vw 0 12vw;
+  min-height: 100vh;
+}
+.section-title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.section-title span {
+  color: yellowgreen;
+  font-size: 3rem;
+}
+/* -------------------- start hero section ---------- */
+.first-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  min-height: 100vh;
+}
+.left-container {
+  align-content: center;
+}
+.left-container h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.left-container h2 {
+  font-size: 2.2rem;
+}
+.left-container h1 {
+  font-size: 2.6rem;
+  color: yellowgreen;
+  margin: 10px 0;
+}
+.left-container p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+.left-container p a {
+  text-decoration: none;
+  color: yellowgreen;
+  font-size: 16px;
+}
+.button-icons_continer {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  align-items: center;
+}
+.button-icons_continer button {
+  border: 0.2rem solid yellowgreen;
+  padding: 5px 20px;
+  background-color: transparent;
+  color: yellowgreen;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: ease-in-out 0.4s;
+  cursor: pointer;
+  animation: BounceAnimation 2s ease 0s 1 normal forwards;
+}
+
+.button-icons_continer button:hover {
+  background-color: yellowgreen;
+  color: #000;
+  box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen,
+    0 0 100px yellowgreen, 0 0 200px yellowgreen;
+}
+.icon-container {
+  display: flex;
+  gap: 15px;
+}
+.icon {
+  border: 2px solid yellowgreen;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  text-align: center;
+  align-content: center;
+  font-size: 1.5rem;
+  color: yellowgreen;
+  font-weight: 600;
+  transition: ease-in-out 0.4s;
+  cursor: pointer;
+  animation: BounceAnimation 4s ease 0s 1 normal forwards;
+}
+.icon:hover {
+  background-color: yellowgreen;
+  color: #000;
+  box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen,
+    0 0 100px yellowgreen, 0 0 200px yellowgreen;
+}
+.right-container {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.picture {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  align-content: center;
+  animation: BounceAnimation 2s ease 0s 1 normal forwards;
+}
+.picture img {
+  height: 290px;
+  width: 290px;
+  border-radius: 50%;
+}
+.picture::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 5px dashed yellowgreen;
+  border-radius: inherit;
+  top: -7px;
+  left: -5px;
+  animation: spin 30s linear infinite;
+  box-shadow: 0 0 5px yellowgreen, 0 0 25px yellowgreen, 0 0 50px yellowgreen,
+    0 0 100px yellowgreen, 0 0 200px yellowgreen;
+}
+/* -------------------- About --------------------- */
+.about {
+  background-color: rgb(28, 41, 1);
+}
+.aboutImg_container {
+  display: flex;
+  justify-content: center;
+}
+.about-img {
+  width: 18rem;
+  height: 18rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-img img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 0.2rem solid rgb(141, 190, 42);
+}
+
+.about-img .circle-spin {
+  width: 100%;
+  height: 100%;
+  border-top: 0.2rem solid transparent;
+  border-bottom: 0.2rem solid transparent;
+  border-left: 0.2rem solid rgb(176, 255, 17);
+  border-right: 0.2rem solid rgb(176, 255, 17);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+}
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem 0;
+}
+.about-title span {
+  font-size: 2.5rem;
+  color: yellowgreen;
+}
+.about-detail {
+  font-size: 1.3rem;
+  text-align: justify;
+  padding: 1rem 0;
+}
+.about-detail a {
+  color: yellowgreen;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+/* --------------------- eduction ---------------------*/
+.eductaion-conatiner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.eductaion-conatiner .heading {
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  width: "100%";
+  margin: 1rem 0;
+}
+.eductaion-conatiner .left {
+  width: "100%";
+}
+.eductaion-conatiner .right {
+  width: "100%";
+}
+.contentBox {
+  border-left: 0.2rem solid rgb(102, 152, 2);
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+.content {
+  background-color: rgb(82, 122, 3);
+  padding: 1rem;
+  position: relative;
+  border-radius: 0.2rem;
+  color: white;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  border: 0.1rem solid black;
+  height: 8.5rem;
+}
+.content:hover {
+  box-shadow: 0 0 0 yellowgreen, 0 0 0px yellowgreen, 0 0 0px yellowgreen,
+    0 0 0px yellowgreen, 0 0 70px yellowgreen;
+  background-color: yellowgreen;
+  color: black;
+}
+.content::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(94, 139, 3);
+  position: absolute;
+  left: -2.2rem;
+  border-radius: 0.2rem;
+  top: 4rem;
+}
+.year span {
+  margin-left: 1rem;
+}
+.exp {
+  text-align: center;
+  align-content: center;
+  height: 100%;
+}
+/* ------------------ skills ------------------------- */
+.skillContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.skill-container {
+  background-color: rgb(60, 90, 2);
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid black;
+}
+.skill-container:hover {
+  box-shadow: 0 0 0 yellowgreen, 0 0 0px yellowgreen, 0 0 0px yellowgreen,
+    0 0 0px yellowgreen, 0 0 70px yellowgreen;
+  background-color: yellowgreen;
+  color: black;
+}
+.skill-container .img {
+  text-align: center;
+}
+.skill-container .img img {
+  width: 6rem;
+  height: 6rem;
+}
+.sikill-name {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.progressBar {
+  background-color: white;
+  width: 100%;
+}
+.progress {
+  height: 0.3rem;
+  background-color: rgb(3, 255, 3);
+}
+/* ----------------------- contact ------------------ */
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 35rem;
+}
+form input {
+  padding: 0.5rem;
+  border: 0.2rem solid yellowgreen;
+  border-radius: 0.5rem;
+  outline: none;
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: white;
+}
+
+.message,
+.sub-btn {
+  grid-column-end: span 2;
+}
+.message {
+  height: 8rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: 0.2rem solid yellowgreen;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+.sub-btn {
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid yellowgreen;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: yellowgreen;
+  background-color: transparent;
+  margin-top: 2rem;
+}
+.sub-btn:hover {
+  box-shadow: 0 0 0 yellowgreen, 0 0 0px yellowgreen, 0 0 0px yellowgreen,
+    0 0 0px yellowgreen, 0 0 70px yellowgreen;
+  background-color: yellowgreen;
+  color: black;
+}
+/* footer */
+footer {
+  color: white;
+  bottom: 0%;
+  width: 100%;
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+footer a {
+  color: yellowgreen;
+  text-decoration: none;
+}
+.footer_lowend {
+  display: none;
+}
+/* -------------------------media queary------------------ */
+@keyframes spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .navigation {
+    padding: 0rem 6vw;
+  }
+  .menu-icon {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  section {
+    padding: 13vh 15px 0 15px;
+    height: auto;
+  }
+  .first-container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    text-align: center;
+    gap: 90px;
+  }
+  .left-container p {
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .button-icons_continer {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+  .picture {
+    height: 200px;
+    width: 200px;
+  }
+  .picture img {
+    height: 190px;
+    width: 190px;
+  }
+  .eductaion-conatiner {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 1rem;
+  }
+  .eductaion-conatiner .heading {
+    justify-content: left;
+  }
+  .content {
+    font-size: 2rem;
+    height: auto;
+    font-weight: 800;
+  }
+  .fullDetail {
+    line-height: 1.5;
+  }
+  .exp-Cont {
+    height: 8rem;
+  }
+  .skillContainer {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+  .sikill-name {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  form {
+    width: 100%;
+  }
+  .footer_lowend {
+    display: grid;
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+  .footer_high {
+    display: none;
+  }
+}
+@media screen and (max-width: 1290px) {
+  * {
+    font-size: 80%;
+  }
+}
+
+/* --------------- */
+@keyframes BounceAnimation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(45px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
