@@ -27,9 +27,28 @@ navLinks.forEach((link, index) => {
   });
 });
 
+const menuLinks = document.querySelectorAll("#menu-list ul li a");
+menuLinks.forEach((link, index) => {
+  link.addEventListener("click", () => {
+    for (let i = 0; i < menuLinks.length; i++) {
+      if (i === index) {
+        menuLinks[i].classList.add("active-menu");
+      } else {
+        menuLinks[i].classList.remove("active-menu");
+      }
+    }
+  });
+});
+
 var typed = new Typed("#name", {
   strings: ["Gautam Kamlesh Yadav"],
   typeSpeed: 200,
   backSpeed: 200,
   loop: true,
 });
+
+function send() {
+  let typedText = "gautam yadav";
+  window.location.href =
+    "https://api.whatsapp.com/send?phone=916306746339?text=" + typedText;
+}

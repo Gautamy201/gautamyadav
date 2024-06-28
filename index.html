@@ -9,7 +9,8 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <title>Document</title>
+    <link rel="icon" href="images/favicon.ico" type="image/icon type" />
+    <title>Code-Master</title>
   </head>
   <body>
     <div class="navigation">
@@ -18,9 +19,9 @@
       </div>
       <nav class="nav">
         <ul>
-          <li><a href="#index" class="active">Home</a></li>
+          <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#eduction">Eduction</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -32,18 +33,24 @@
         </button>
         <div class="menu-list" id="menu-list">
           <ul>
-            <li><a href="#home" class="active-menu">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#eduction">Eduction</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a onclick="handleMenuBtn()" href="#home" class="active-menu"
+                >Home</a
+              >
+            </li>
+            <li><a onclick="handleMenuBtn()" href="#about">About</a></li>
+            <li>
+              <a onclick="handleMenuBtn()" href="#education">Education</a>
+            </li>
+            <li><a onclick="handleMenuBtn()" href="#skills">Skills</a></li>
+            <li><a onclick="handleMenuBtn()" href="#projects">Projects</a></li>
+            <li><a onclick="handleMenuBtn()" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </div>
     <!-- strat hero section -->
-    <section>
+    <section id="home">
       <div class="first-container">
         <div class="left-container">
           <h2>Hello, It's Me</h2>
@@ -56,10 +63,20 @@
           <div class="button-icons_continer">
             <button>Download Resume</button>
             <div class="icon-container">
-              <div class="icon"><i class="ri-whatsapp-line"></i></div>
-              <div class="icon"><i class="ri-instagram-line"></i></div>
-              <div class="icon"><i class="ri-linkedin-line"></i></div>
-              <div class="icon"><i class="ri-twitter-line"></i></div>
+              <a
+                href="https://api.whatsapp.com/send?phone=916306746339?text="
+                class="icon"
+                ><i class="ri-whatsapp-line"></i
+              ></a>
+              <a href="https://www.instagram.com/mr_gautamyadav/" class="icon"
+                ><i class="ri-instagram-line"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/gautam-yadav-6971312ba/"
+                class="icon"
+                ><i class="ri-linkedin-line"></i
+              ></a>
+              <a href="" class="icon"><i class="ri-github-fill"></i></a>
             </div>
           </div>
         </div>
@@ -72,7 +89,7 @@
       </div>
     </section>
     <!-- about -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="section-title">About <span>Me</span></div>
       <div class="aboutImg_container">
         <div class="about-img">
@@ -112,7 +129,7 @@
         projects with you!
       </p>
     </section>
-    <section class="education">
+    <section class="education" id="education">
       <div class="section-title">My <span>Education</span></div>
       <div class="eductaion-conatiner">
         <div class="left">
@@ -164,7 +181,7 @@
       </div>
     </section>
     <!-- skills -->
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="section-title">My <span>Skills</span></div>
       <div class="skillContainer">
         <div class="skill-container">
@@ -264,12 +281,22 @@
       </div>
     </section>
     <!-- contact us -->
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="section-title">Contact <span>Me!</span></div>
       <div class="formContainer">
-        <form action="">
-          <input class="fullName" type="text" placeholder="Full Name" />
-          <input class="email" type="email" placeholder="Email Address" />
+        <form onsubmit="send(); reset(); return false;">
+          <input
+            id="name"
+            class="fullName"
+            type="text"
+            placeholder="Full Name"
+          />
+          <input
+            id="email"
+            class="email"
+            type="email"
+            placeholder="Email Address"
+          />
           <input class="mobile" type="number" placeholder="Mobile Number" />
           <input class="subject" type="text" placeholder="Subject" />
           <textarea
@@ -278,7 +305,7 @@
             form="usrform"
             placeholder="Enter Your Message"
           ></textarea>
-          <button class="sub-btn">Submite</button>
+          <button type="submit" class="sub-btn">Submite</button>
         </form>
       </div>
       <footer class="footer_high">
@@ -295,6 +322,7 @@
         </p>
       </footer>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
