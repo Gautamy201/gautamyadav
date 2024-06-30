@@ -155,7 +155,7 @@ section {
   margin-top: 30px;
   align-items: center;
 }
-.button-icons_continer button {
+.button-icons_continer .button {
   border: 0.2rem solid yellowgreen;
   padding: 5px 20px;
   background-color: transparent;
@@ -166,6 +166,7 @@ section {
   transition: ease-in-out 0.4s;
   cursor: pointer;
   animation: BounceAnimation 2s ease 0s 1 normal forwards;
+  text-decoration: none;
 }
 
 .button-icons_continer button:hover {
